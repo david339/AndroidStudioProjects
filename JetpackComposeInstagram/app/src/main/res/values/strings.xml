@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JetpackComposeInstagram</string>
+    <string name="title_activity_login_veterinario">LoginVeterinario</string>
+    <string name="title_activity_list_veterinario">ListActivityVeterinario</string>
+    <string name="title_activity_login_instagram">LoginInstagramActivity</string>
+    <string name="title_activity_ejercicios_book">EjerciciosBookActivity</string>
+    <string name="title_activity_descuentos_app">DescuentosAppActivity</string>
+    <string name="title_activity_liquid_button">LiquidButtonActivity</string>
+    <string name="title_activity_curso_udemy">CursoUdemyActivity</string>
+    <string name="title_activity_snake_game">SnakeGameActivity</string>
+</resources>

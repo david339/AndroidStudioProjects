@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="20dp"
+    tools:context=".calculadorajavaapp.CalculadoraActivity">
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="35dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:layout_above="@+id/nums"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/nums"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <!-- Este primer linear es para la primera columna, se inicia de arriba
+        para abajo, hay que tomar en cuenta que el padre o sea el anterior linear
+        esta con una orientacion horizontal lo que nos indica que se acomodaran
+        por columnas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonOn"
+                style="@style/Button2"
+                android:text="ON" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button7"
+                style="@style/Button1"
+                android:text="7" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button4"
+                style="@style/Button1"
+                android:text="4" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button1"
+                style="@style/Button1"
+                android:text="1" />
+        </LinearLayout>
+
+        <!-- Segunda columna -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonOf"
+                style="@style/Button2"
+                android:text="OF" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button"
+                style="@style/Button1"
+                android:text="8" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button5"
+                style="@style/Button1"
+                android:text="5" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button2"
+                style="@style/Button1"
+                android:text="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonAC"
+                style="@style/Button2"
+                android:text="AC" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button9"
+                style="@style/Button1"
+                android:text="9" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button6"
+                style="@style/Button1"
+                android:text="6" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonPunto"
+                style="@style/Button1"
+                android:text="." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonDivision"
+                style="@style/Button2"
+                android:textSize="32dp"
+                android:text="/" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonMultiplicacion"
+                style="@style/Button1"
+                android:text="X" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonResta"
+                style="@style/Button1"
+                android:textSize="35sp"
+                android:text="-" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonIgual"
+                style="@style/Button1"
+                android:text="=" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
