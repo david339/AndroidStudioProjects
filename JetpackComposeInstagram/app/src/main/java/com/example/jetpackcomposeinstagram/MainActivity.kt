@@ -78,7 +78,6 @@ fun Inicio(){
                 Text("EjerciciosBook APP")
             }
         }
-
         item {
             Button(
                 onClick = {
@@ -89,7 +88,6 @@ fun Inicio(){
                 Text("DescuentosApp")
             }
         }
-
         item {
             Button(
                 onClick = {
