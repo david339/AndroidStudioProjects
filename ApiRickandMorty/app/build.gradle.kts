@@ -3,19 +3,18 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
     namespace = "com.synapsistech.apirickandmorty"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.synapsistech.apirickandmorty"
         minSdk = 25
-        //noinspection OldTargetApi
-        targetSdk = 33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -41,15 +40,9 @@ android {
     buildFeatures {
         compose = true
     }
-
-    composeOptions{
-        kotlinCompilerExtensionVersion = "1.4.3"
-    }
-
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -67,17 +60,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.retrofit)
-
     implementation(libs.converter.gson)
-
     implementation(libs.coil.compose)
-
     implementation(libs.androidx.material.icons.extended)
 
-    //val hilt_navigation_compose_version = "1.0.0"
-    //val hilt_version = "2.44"
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-
 }
